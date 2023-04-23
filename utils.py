@@ -1,17 +1,5 @@
 # utils functions
 import pandas as pd
-import numpy as np
-import torch
-import torch.nn as nn
-import torch.optim as optim
-from torch.utils.data import DataLoader, Dataset
-from sklearn import model_selection, metrics, preprocessing
-from sklearn.model_selection import train_test_split
-import matplotlib
-import matplotlib.pyplot as plt
-import math
-import random
-random.seed(0);
 
 def time_to_rating(x):
     """
@@ -27,7 +15,7 @@ def time_to_rating(x):
     rating = (x/2)**(1/2)
     rating = max(rating, 1)
     rating = min(rating, 10)
-    return math.floor(rating)
+    return int(rating)
 	
 def df_to_rating(df):
     """Converts a DataFrame containing start and stop times for user viewing sessions
