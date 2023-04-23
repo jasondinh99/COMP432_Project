@@ -1,5 +1,6 @@
 # utils functions
 import pandas as pd
+import math
 
 def time_to_rating(x):
     """
@@ -15,7 +16,7 @@ def time_to_rating(x):
     rating = (x/2)**(1/2)
     rating = max(rating, 1)
     rating = min(rating, 10)
-    return int(rating)
+    return math.floor(rating)
 	
 def df_to_rating(df):
     """Converts a DataFrame containing start and stop times for user viewing sessions
