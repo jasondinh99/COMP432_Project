@@ -1,5 +1,6 @@
 # utils functions
 import pandas as pd
+import math
 
 def time_to_rating(x):
     """
