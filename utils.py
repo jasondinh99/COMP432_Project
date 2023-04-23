@@ -1,4 +1,6 @@
 # utils functions
+import pandas as pd
+
 def time_to_rating(x):
     """
     Calculates the rating for a given watchtime.
